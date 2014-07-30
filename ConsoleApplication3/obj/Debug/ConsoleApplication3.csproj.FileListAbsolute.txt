@@ -1,0 +1,8 @@
+c:\users\zvssd\documents\visual studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+c:\users\zvssd\documents\visual studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+c:\users\zvssd\documents\visual studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+c:\users\zvssd\documents\visual studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+c:\users\zvssd\documents\visual studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+c:\users\zvssd\documents\visual studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\zvssd\Documents\Visual Studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zvssd\Documents\Visual Studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Newtonsoft.Json.xml
