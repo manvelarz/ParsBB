@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
+using System.IO;
 
     public static class Functions
     {
@@ -11,17 +12,17 @@ using System.Threading.Tasks;
         {
             if (line.IndexOf("),") == -1)
             {
-                string[] elements = line.Split('\'');
-                switch (CountOfChar(line, '\''))
+                List<string> elements = Functions.CustomSplit(line.Trim(), '\'');
+                switch (elements.Count)
                 {
-                    case 4:
-                        string[] ret4 = { parent + elements[1], elements[3] };
-                        return ret4;
-                    case 2:
+                    case 5:
+                        string[] ret5 = { parent + elements[1], elements[3] };
+                        return ret5;
+                    case 3:
                         if (line.IndexOf('\'') < line.IndexOf('='))
                         {
-                            string[] ret2 = {elements[1], "" };
-                            return ret2;
+                            string[] ret3 = {elements[1], "" };
+                            return ret3;
                         }
                         else// (line.IndexOf('\'') > line.IndexOf('='))
                         {
@@ -29,11 +30,14 @@ using System.Threading.Tasks;
                             string[] retsub2 = { parent + Convert.ToString(subelements[0]), elements[1] };
                             return retsub2;
                         }
-
-
+                    case 4:
+                            string[] ret4 = {"PErr","err_ Multi Line",elements[1] };
+                            return ret4;
+                    case 7:
+                            string[] ret7 = { parent + elements[1], elements[3] };
+                            return ret7;
                     default:
-                        // You can use the default case.
-                        string[] rett = { "------------------INVALID----------------------", "------------------INVALID----------------------" };
+                            string[] rett = { "PErr", "UNNOWN", elements[1] };
                         return rett;
                 }
             }
@@ -41,7 +45,6 @@ using System.Threading.Tasks;
             string[] ret = { "", "" };
             return ret;
         }
-
 
         public static int CountOfChar(string LineForChar, char CharToCount)
         {
@@ -51,29 +54,12 @@ using System.Threading.Tasks;
             return countt;
         }
 
-
         public static string AddParent (string parent, string NewParent)
         {
             string tempPatent = parent + NewParent + ".";
             return tempPatent;
         }
 
-        public static List<string> CustomSplit (string line, char CharToSplit)
-        {
-            List<string> LineList = line.Split(CharToSplit).ToList<string>();
-            List<string> newLineList;
-            for (int i = 0; i < LineList.Count; i++)
-            {
-                //char last =  LineArr[LineArr.Length - 1];
-                if (LineList[i].Substring(LineList[i].Length - 1, 1) == @"\")
-                {
-                    LineList[i] = LineList[i].Substring(0, LineList[i].Length - 1);
-                }
-                 newLineList.Add(LineList[i]);
-            }
-            return newLineList;
-        }
-        
         public static string RemoveLastParent (string parent)
         {
             string[] ParentSplited = parent.Split('.');
@@ -85,6 +71,57 @@ using System.Threading.Tasks;
             }
            // parent = NewParent;
             return NewParent;
+        }
+
+        public static List<string> CustomSplit(string line, char CharToSplit)
+        {
+            List<string> LineList = line.Split(CharToSplit).ToList<string>();
+            List<string> newLineList = new List<string>();
+            for (int i = 0; i < LineList.Count; i++)
+            {
+
+                if (LineList[i].EndsWith(@"\") )
+                {
+                    if (LineList[i+1].EndsWith(@"\") )
+                    {
+                        newLineList.Add((LineList[i].Substring(0, LineList[i].Length - 1)) + "{" + (LineList[i + 1].Substring(0, LineList[i + 1].Length - 1)) + "}" + LineList[i + 2]);
+                    i=i+2;
+                    }
+                    else
+                    {
+                        newLineList.Add((LineList[i].Substring(0, LineList[i].Length - 1)) + LineList[i + 1]);
+                        i++;
+                       // Console.WriteLine("VVVOOORRRIIIAAAAAAA");
+                    }
+                }
+                else
+                {
+                    newLineList.Add(LineList[i]);
+                }
+
+            }
+            return newLineList;
+        }	
+
+
+        public static void Table2Cvs(string FilePath, DataTable table)
+        {
+           // List<DataTable> tbList = GetTablesFromPath(path, langName);
+
+
+            StringBuilder sb = new StringBuilder();
+
+            IEnumerable<string> columnNames = table.Columns.Cast<DataColumn>().
+                                              Select(column => column.ColumnName);
+            sb.AppendLine(string.Join("^^^", columnNames));
+
+            foreach (DataRow row in table.Rows)
+            {
+                IEnumerable<string> fields = row.ItemArray.Select(field => field.ToString());
+                sb.AppendLine(string.Join("^^^", fields));
+            }
+
+            File.WriteAllText(FilePath, sb.ToString());
         }
 
     }

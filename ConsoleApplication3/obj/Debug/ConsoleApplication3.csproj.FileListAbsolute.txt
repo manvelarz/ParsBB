@@ -6,3 +6,11 @@ c:\users\zvssd\documents\visual studio 2012\Projects\ConsoleApplication3\Console
 c:\users\zvssd\documents\visual studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
 C:\Users\zvssd\Documents\Visual Studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Newtonsoft.Json.dll
 C:\Users\zvssd\Documents\Visual Studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zvssd\Documents\GIT\ParsBB\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\zvssd\Documents\GIT\ParsBB\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\zvssd\Documents\GIT\ParsBB\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\Users\zvssd\Documents\GIT\ParsBB\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\zvssd\Documents\GIT\ParsBB\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\zvssd\Documents\GIT\ParsBB\ConsoleApplication3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zvssd\Documents\GIT\ParsBB\ConsoleApplication3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zvssd\Documents\GIT\ParsBB\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
