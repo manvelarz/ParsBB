@@ -1,0 +1,6 @@
+C:\Users\zvssd\Documents\GIT\ParsBB\PRUEBAS\bin\Debug\PRUEBAS.exe.config
+C:\Users\zvssd\Documents\GIT\ParsBB\PRUEBAS\bin\Debug\PRUEBAS.exe
+C:\Users\zvssd\Documents\GIT\ParsBB\PRUEBAS\bin\Debug\PRUEBAS.pdb
+C:\Users\zvssd\Documents\GIT\ParsBB\PRUEBAS\obj\Debug\PRUEBAS.exe
+C:\Users\zvssd\Documents\GIT\ParsBB\PRUEBAS\obj\Debug\PRUEBAS.pdb
+C:\Users\zvssd\Documents\GIT\ParsBB\PRUEBAS\obj\Debug\PRUEBAS.csprojResolveAssemblyReference.cache

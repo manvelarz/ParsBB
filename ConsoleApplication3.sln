@@ -2,6 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication3", "ConsoleApplication3\ConsoleApplication3.csproj", "{BAED21C4-04BB-4968-85BB-CDC613BE26A9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9F55EEFF-2363-4757-84FA-E2C2AA1B31D0} = {9F55EEFF-2363-4757-84FA-E2C2AA1B31D0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRUEBAS", "PRUEBAS\PRUEBAS.csproj", "{9F55EEFF-2363-4757-84FA-E2C2AA1B31D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +18,10 @@ Global
 		{BAED21C4-04BB-4968-85BB-CDC613BE26A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAED21C4-04BB-4968-85BB-CDC613BE26A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAED21C4-04BB-4968-85BB-CDC613BE26A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F55EEFF-2363-4757-84FA-E2C2AA1B31D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F55EEFF-2363-4757-84FA-E2C2AA1B31D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F55EEFF-2363-4757-84FA-E2C2AA1B31D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F55EEFF-2363-4757-84FA-E2C2AA1B31D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
